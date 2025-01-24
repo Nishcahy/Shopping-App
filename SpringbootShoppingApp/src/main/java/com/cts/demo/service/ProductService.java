@@ -6,7 +6,7 @@ import com.cts.demo.entity.Product;
 import com.cts.demo.exception.ProductNotFound;
 
 public interface ProductService {
-	
+
 	String addProduct(Product product);
 
 	List<Product> getAllProducts();
@@ -18,8 +18,8 @@ public interface ProductService {
 	Product getProductById(int productId) throws ProductNotFound;
 
 	List<Product> getAllProductsBetween(int initialPrice, int finalPrice);
-	
+
 	List<Product> findByProductCategory(String category);
-	
-	List<Product> findByproductPriceLessThan(String category,int price);
+
+	List<Product> findByproductPriceLessThan(String category, int price);
 }

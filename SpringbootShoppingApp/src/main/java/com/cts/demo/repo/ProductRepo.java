@@ -10,11 +10,16 @@ import com.cts.demo.entity.Product;
 
 @Repository
 public interface ProductRepo extends JpaRepository<Product, Integer> {
-	
+
 //	@Query("select p from Product p where p.productPrice between ?1 and ?2")
 //  List<Product> getAllProductsBetween(int initialPrice,int finalPrice);
-	
-	List<Product> findByProductPriceBetween(int initialPrice,int finalPrice);
+
+// Query to find the product price between specified price
+	List<Product> findByProductPriceBetween(int initialPrice, int finalPrice);
+
+//Query to find the product by category
 	List<Product> findByProductCategory(String category);
-	List<Product> findByProductCategoryAndProductPriceLessThan(String category,int productPrice);
+
+//Query to find the product by category and find the product in category in price
+	List<Product> findByProductCategoryAndProductPriceLessThan(String category, int productPrice);
 }

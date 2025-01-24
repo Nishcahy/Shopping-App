@@ -13,11 +13,9 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.context.request.WebRequest;
 
-
 @ControllerAdvice
 public class GlobalExecptionHandler {
-	
-	
+
 	@ExceptionHandler(value = MethodArgumentNotValidException.class)
 	public ResponseEntity<Object> handleMethodArgumentNotValid(MethodArgumentNotValidException ex) {
 
@@ -25,7 +23,7 @@ public class GlobalExecptionHandler {
 		body.put("timestamp", new Date());
 		// Get all errors
 		ex.getBindingResult().getAllErrors().forEach(error -> {
-				body.put(((FieldError)error).getField(),error.getDefaultMessage());
+			body.put(((FieldError) error).getField(), error.getDefaultMessage());
 		});
 		return new ResponseEntity<Object>(body, HttpStatus.BAD_REQUEST);
 

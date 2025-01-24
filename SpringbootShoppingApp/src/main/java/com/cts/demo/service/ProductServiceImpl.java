@@ -69,9 +69,9 @@ public class ProductServiceImpl implements ProductService {
 	}
 
 	@Override
-	public List<Product> findByproductPriceLessThan(String category,int price) {
+	public List<Product> findByproductPriceLessThan(String category, int price) {
 
-		return productrepo.findByProductCategoryAndProductPriceLessThan(category,price);
+		return productrepo.findByProductCategoryAndProductPriceLessThan(category, price);
 	}
 
 }

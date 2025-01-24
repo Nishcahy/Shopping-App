@@ -10,11 +10,9 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class ExceptionResponse {
-	
 
-		private int status;
-		private String message;
-		private LocalDateTime time;
-
+	private int status;
+	private String message;
+	private LocalDateTime time;
 
 }

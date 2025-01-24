@@ -16,20 +16,19 @@ import lombok.Data;
 @Data
 @Table
 public class Product {
-	
+
 	@Id
 	@NotEmpty
 	@NotNull(message = "Product ID cannot be null")
 	private int productId;
-	
+
 	@NotNull(message = "Product Name cannot be null")
 	private String productName;
-	@Positive(message="Price should be Positive")
+	@Positive(message = "Price should be Positive")
 	private int productPrice;
 	@NotNull(message = "Product Category cannot be null")
 	private String productCategory;
-	
+
 	private Date productValidaty;
-	
 
 }
